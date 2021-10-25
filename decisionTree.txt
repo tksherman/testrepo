@@ -1,0 +1,6 @@
+from sklearn.tree import DecisionTreeClassifier
+test_loanTree = DecisionTreeClassifier(criterion="entropy", max_depth = 4)
+test_loanTree # it shows the default parameters
+test_loanTree.fit(X_train,y_train)
+test_predTree = loanTree.predict(X_test)
+print("DecisionTrees's Accuracy: ", metrics.accuracy_score(y_test, test_predTree))
